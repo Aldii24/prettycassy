@@ -1,101 +1,267 @@
+import AccordionText from "@/components/AccordionText";
+import Chart from "@/components/Chart";
+import Galerry from "@/components/Galerry";
 import Image from "next/image";
+import { Spotify } from "react-spotify-embed";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="relative flex flex-col min-h-screen w-full md:pt-36 pt-28 md:px-8 px-4">
+      <div className="relative flex w-full overflow-hidden">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/assets/collages/collage.png"
+          width={400}
+          height={400}
+          alt="collage"
+          className="rounded-lg shadow-lg md:h-[600px] w-1/2 h-[300px]"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <Image
+          src="/assets/gif/baloon.gif"
+          alt="baloon"
+          width={150}
+          height={150}
+          className="absolute top-[150px] left-[0px]"
+        />
+        <Image
+          src="/assets/images/pretty5.jpg"
+          alt="pretty"
+          width={150}
+          height={150}
+          className="absolute top-[10px] right-[0px] rounded-lg shadow-lg"
+        />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <Image
+          src="/assets/gif/candle.gif"
+          width={100}
+          height={100}
+          alt="candle"
+          className="absolute top-[220px] right-[20px]"
+        />
+      </div>
+      <blockquote className="mt-16 border-l-2 pl-4 italic">
+        Who's birthday today? pacar akuuu hari ini ulang tahun, happy birthday
+        sayang. Maaf ya kalau ngucapinnya lama, aku harap di umur kamu yang
+        sekarang (uda tua tapi masi kecik), kamu bisa dapetin hal-hal yang kamu
+        inginkan selama ini, yaaa!
+      </blockquote>
+
+      <div className="relative mt-4">
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute -top-4 left-[70px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute left-[100px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[20px] left-[130px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[50px] left-[150px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[90px] left-[150px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[125px] left-[130px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[135px] left-[100px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[130px] left-[70px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[100px] left-[60px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[70px] left-[70px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[60px] left-[100px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[70px] left-[130px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[110px] left-[170px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[140px] left-[180px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[170px] left-[170px]"
+        />
+        <Image
+          src="/assets/images/star.png"
+          width={50}
+          height={50}
+          alt="star"
+          className="absolute top-[200px] left-[150px]"
+        />
+      </div>
+
+      <div className="relative mt-6 w-full">
+        <Image
+          src="/assets/images/pretty10.jpg"
+          alt="pretty"
+          width={300}
+          height={300}
+          className="absolute left-5 top-[150px] rounded-full w-[100px] h-[100px] object-cover -z-10"
+        />
+        <Image
+          src="/assets/images/pretty8.jpg"
+          alt="pretty"
+          width={300}
+          height={300}
+          className="absolute right-5 rounded-full w-[120px] h-[120px] object-cover -z-10"
+        />
+      </div>
+
+      <div className="mt-[300px]">
+        <blockquote className="mt-6 border-l-2 pl-6 italic">
+          Happy Birthday to the Queen of my heart, the Lady of my dreams, and
+          the Love of my Life.
+        </blockquote>
+      </div>
+
+      <div className="mt-16">
+        <h3>3 Hal kenapa aku mencintai dan menyayangi kamu</h3>
+        <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+          <li>
+            Karena kamu sangat cantikkk, baikkk, lucuuu, gemesss, dan sempurnaa
+          </li>
+          <li>
+            Karena kamu sangat cantikkk, baikkk, lucuuu, gemesss, dan sempurnaa
+          </li>
+          <li>
+            Karena kamu sangat cantikkk, baikkk, lucuuu, gemesss, dan sempurnaa
+          </li>
+        </ul>
+
+        <h4>
+          Kenapa cuma 3 hal? karna kalo beribu, beratus ribu, berjuta,
+          bermilyar, bertrilyun aku cape ngetiknya, sayang 🥰
+        </h4>
+      </div>
+
+      <h3 className="mt-16 font-bold">
+        Selain itu, kamu juga punya hal-hal yang sangat emejing, yaitu
+      </h3>
+
+      <div className="relative mt-5 py-5 pb-10">
+        <Chart />
+      </div>
+
+      <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+        An Art Gallery
+      </h2>
+
+      <div className="relative">
+        <Image
+          src="/assets/gif/cheer.gif"
+          width={100}
+          height={100}
+          alt="cheer"
+          className="absolute z-10 top-10 right-0"
+        />
+        <Image
+          src="/assets/gif/cheer.gif"
+          width={100}
+          height={100}
+          alt="cheer"
+          className="absolute z-10 top-10 -left-3"
+        />
+        <Image
+          src="/assets/gif/cheer-2.gif"
+          width={100}
+          height={100}
+          alt="cheer"
+          className="absolute z-10 top-[250px] right-0"
+        />
+        <Image
+          src="/assets/gif/cheer-2.gif"
+          width={100}
+          height={100}
+          alt="cheer"
+          className="absolute z-10 top-[250px] -left-3"
+        />
+      </div>
+
+      <Galerry />
+
+      <div className="mt-16">
+        <h1 className="mb-4">
+          Beberapa pertanyaan tapi sudah ada jawabannya ^_^
+        </h1>
+        <AccordionText />
+      </div>
+
+      <div className="flex justify-center items-center mt-16 w-full">
+        <Spotify
+          className="w-full"
+          link="https://open.spotify.com/playlist/7KVWljKHQORCRnEnTVlSeH?si=mgSfdj2MTfO10qeOoYs9Ug"
+        />
+      </div>
     </div>
   );
 }
