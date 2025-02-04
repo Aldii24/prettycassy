@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/Navbar";
+import { Provider } from "@/components/ui/provider";
 
 const shadowIntoLight = Shadows_Into_Light({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
+
           {children}
         </ThemeProvider>
       </body>

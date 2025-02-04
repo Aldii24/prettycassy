@@ -5,27 +5,39 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const faqs = [
+  {
+    id: "item-1",
+    question: "Apakah pacarku cantik?",
+    answer:
+      "Jelas dong, jelas banget, jelas sekali, jelas betul CANTIKKK. CANTIKNYA PAKE BANGETTT.",
+  },
+  {
+    id: "item-2",
+    question: "Apakah pacarku lucu?",
+    answer:
+      "Gausa ditanya lagi kali ya, LUCU BANGET KAYA ANAK KECIK YANG MASI BAU BEDAK BAYI 🥰.",
+  },
+  {
+    id: "item-3",
+    question: "Apakah pacarku imut?",
+    answer: "YA IMUT",
+  },
+];
+
 const AccordionText = () => {
   return (
-    <Accordion type="single" collapsible>
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Apakah pacarku cantik?</AccordionTrigger>
-        <AccordionContent>
-          Jelas dong, jelas banget, jelas sekali, jelas betul CANTIKKK.
-          CANTIKNYA PAKE BANGETTT.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger>Apakah pacarku lucu?</AccordionTrigger>
-        <AccordionContent>
-          Gausa ditanya lagi kali ya, LUCU BANGET KAYA ANAK KECIK YANG MASI BAU
-          BEDAK BAYI 🥰.
-        </AccordionContent>
-      </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger>Apakah pacarku imut?</AccordionTrigger>
-        <AccordionContent>YA IMUT</AccordionContent>
-      </AccordionItem>
+    <Accordion
+      className="max-w-[450px] max-h-[800px]"
+      type="single"
+      collapsible
+    >
+      {faqs.map((faq) => (
+        <AccordionItem key={faq.id} value={faq.id}>
+          <AccordionTrigger>{faq.question}</AccordionTrigger>
+          <AccordionContent>{faq.answer}</AccordionContent>
+        </AccordionItem>
+      ))}
     </Accordion>
   );
 };

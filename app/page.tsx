@@ -6,8 +6,8 @@ import { Spotify } from "react-spotify-embed";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col min-h-screen w-full md:pt-36 pt-28 md:px-8 px-4">
-      <div className="relative flex w-full overflow-hidden">
+    <div className="relative flex flex-col min-h-screen w-full md:pt-36 pt-28 md:px-8 px-4 overflow-hidden">
+      <div className="relative flex w-full ">
         <Image
           src="/assets/collages/collage.png"
           width={400}
@@ -160,9 +160,9 @@ export default function Home() {
         />
       </div>
 
-      <div className="relative mt-6 w-full">
+      <div className="relative mt-6">
         <Image
-          src="/assets/images/pretty10.jpg"
+          src="/assets/images/pretty11.jpg"
           alt="pretty"
           width={300}
           height={300}
@@ -249,7 +249,7 @@ export default function Home() {
 
       <Galerry />
 
-      <div className="mt-16">
+      <div className=" mt-16 w-full h-full">
         <h1 className="mb-4">
           Beberapa pertanyaan tapi sudah ada jawabannya ^_^
         </h1>

@@ -49,7 +49,7 @@ const chartConfig = {
 
 const Chart = () => {
   return (
-    <Card className="bg-transparent">
+    <Card className="bg-transparent max-w-[450px] overflow-hidden">
       <CardHeader>
         <CardTitle>Hal-hal yang dimiliki pacarku</CardTitle>
         <CardDescription>2005 - 2025</CardDescription>
