@@ -256,11 +256,19 @@ export default function Home() {
         <AccordionText />
       </div>
 
-      <div className="flex justify-center items-center mt-16 w-full">
+      <div className="flex flex-col justify-center items-center mt-16 w-full">
+        <h1 className="mb-8">Listen to ur favorite playlist, sayang</h1>
         <Spotify
           className="w-full"
           link="https://open.spotify.com/playlist/7KVWljKHQORCRnEnTVlSeH?si=mgSfdj2MTfO10qeOoYs9Ug"
         />
+      </div>
+
+      <div className="mt-16 flex flex-col justify-center items-center">
+        <h1 className="text-3xl font-bold">HAPPY BIRTHDAY, SAYANG</h1>
+        <div className="h-[1px] bg-gray-500 w-full my-2"></div>
+        <p>I love you so much</p>
+        <span>-- ur bf: Ikan🐟</span>
       </div>
     </div>
   );
